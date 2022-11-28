@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&display=swap');
+
+html{
+    scroll-behavior: smooth;
+    background-color: #1A1F32;
+    font-family: 'Archivo Black', sans-serif;
+
+    text-rendering: optimizelegibility;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h2{
+    text-transform: uppercase;
+}
+
+/* Début page d'acceuil du site internet */
+
+.bg-home{
+    background-image: url(../img/ow2-background-home.jpeg);
+    background-size: cover;
+    background-position: center 35%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.3);
+    background-blend-mode: darken;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.bg-home h1{
+    margin: 10px;
+    color: #F99E1A;
+    font-size: 45px;
+    text-shadow: -10px 5px 5px rgba(0,0,0,0.76);
+}
+
+
+
+.bg-home img{
+    width: 60%;
+    max-width: 1440px;
+}
+/* Fin page d'acceuil du site internet */
+
+    /* Début page présentation du site internet */
+
+/* Sous partie description */
+
+.description p{
+    color:#000000;
+    font-size:30px;
+}
+
+ .description h1{
+    display:flex;
+    justify-content:center;
+    font-size: 70px;
+    font-style: bold;
+}
+
+
+
+/* Sous partie partie 1 */
+
+.description h2{
+    -webkit-mask-box-image: url("../img/divider.svg");
+    mask-border: url("../img/divider.svg");
+    -webkit-mask-box-image-slice: 20 350 fill;
+    mask-border-slice: 20 350 fill;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background-color: rgba(229,235,244,0.8);
+    display:flex;
+    justify-content: center;
+    color:#000000;
+    font-size: 3.667vw;
+    line-height: 2.8;
+}
+
+.first-divider{
+    margin-top: -18px;
+}
+
+.description .container-first{
+    padding: 5% 10%;
+}
+
+.description .container-first .quote-1 {
+    position: relative;
+    border: 4px solid rgba(229,235,244,0.8);
+    width: 80%;
+    margin: 0 auto 40px auto;
+}
+
+ /*Trick from https://css-tricks.com/aspect-ratio-boxes/*/
+.description .container-first .quote-1::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.description .container-first .quote-1::before {
+    content: "";
+    display: block;
+    float: left;
+    padding-bottom: 56.25%;
+}
+
+.description .container-first .quote-1 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.description .container-first .quote-2{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.description .container-first .quote-2 h3{
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    color: #F99E1A;
+}
+
+.description .container-first .quote-2 p{
+    text-align: center;
+    font-size: 20px;
+    color: rgba(229,235,244,0.9);
+    line-height: 35px;
+}
+
+/* sous partie partie 2 */
+
+.description .container-two{
+    padding: 1% 10%;
+}
+
+.description .container-two img{
+    width: 300px;
+    height: 300px;
+    border: 3px solid white;
+    border-radius: 10%;  
+     
+}
+
+.description .container-two h3{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color:#F99E1A;
+    font-size: 38px; 
+}
+
+.description .container-two .quote-1 p{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: rgba(229,235,244,0.9);
+}
+
+.description .container-two p{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 20px;
+    color: rgba(229,235,244,0.9);
+}
+
+.description .container-two .quote-2{
+   display: flex;
+   justify-content: space-between;
+}
+
+
+.description .container-two .quote-2{
+    text-align: center;
+    color: #F99E1A;
+    font-size:30px;
+}
+
+
+/* sous partie partie 3 */
+
+.description .container-three{
+    font-size: 30px;
+    padding:4% 10%;
+    display:flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.description .container-three .quote-1{
+    font-size:30px;
+    color: #F99E1A;
+}
+
+.description .container-three .quote-1 img{
+    margin: 10px;
+    width: 65px;
+    height: 65px;
+}
+
+
+.description .container-three .quote-2 img{
+    width: 100px;
+    height: 100px;
+    padding-left: 60px;
+}
+
+.description .container-three .quote-2{
+    padding-left: 136px;
+    margin-right: 31px;
+}
+
+.description .container-three .quote-2 h4{
+    margin-top: 28px;
+    font-size:30px;
+}
+
+
+.description .container-three .quote-3 img{
+    width: 90px;
+    height: 90px;
+}
+
+.description .container-three .quote-3 h5{
+    margin-left: -10px;
+    margin-top: 38px;
+    font-size:30px;
+}
+
+.description .container-three .quote-3{
+    padding-left: 150px;
+}
+
+/* sous partie partie 4 */
+
+.description .container-four{
+    padding: 8% 10%;
+}
+
+.description .container-four {
+    display: flex;
+    justify-content: space-between;
+    text-align: -webkit-center;
+}
+
+.description .container-four .quote {
+    width: 30%;
+    padding: 20px 25px 30px 25px;
+}
+
+.description .container-four .quote h3 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.description .container-four .quote-1 h3{
+    color:#F99E1A;
+    text-shadow: -8px 6px 5px rgba(0,0,0,0.76);
+}
+
+.description .container-four .quote-1{
+    background-color: #218ffe;
+    border:4px solid #F99E1A;
+    border-radius: 6px;
+}
+
+.description .container-four .quote-2 h3{
+    color:#F99E1A;
+    text-shadow: -8px 6px 5px rgba(0,0,0,0.76);
+}
+
+.description .container-four .quote-3 h3{
+    color:#F99E1A;
+    text-shadow: -8px 6px 5px rgba(0,0,0,0.76);
+}
+
+.description .container-four .quote-2{
+    background-color: green;
+    border:4px solid #F99E1A;
+    border-radius: 6px;
+}
+
+.description .container-four .quote-3{
+    background-color: violet;
+    border:4px solid #F99E1A;
+    border-radius: 6px;
+}
+
+.description .container-four p{
+    text-align: center;
+    font-size: 24px;
+    color: rgba(0,0,0,0.8);
+}
+
+    /* Fin page présentation du site internet */
+
+
+/* Début partie de la barre de navigation du site internet */
+nav {
+    position: fixed;
+    top: 25px;
+    left: 0;
+    right: 0;
+    width: 75%;
+    z-index: 9999;
+    margin: auto;
+    height: 75px;
+    background-color: rgba(229,235,244,0.9);
+    border-radius: 10px;
+}
+
+nav .logo {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    height: 45px;
+    transform: translateY(-50%);
+}
+
+.navbar ul li a {
+    font-size: 1.4vw;
+	text-transform: uppercase;
+    text-decoration: none;
+	color: black;
+	cursor: pointer;
+    transition: all 250ms ease-out;
+}
+
+.navbar ul li a:hover {
+    color: #F99E1A;
+    transition: all 250ms ease-in;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center; /*aligne les items sur ligne horizontale (img surtout)*/
+}
+
+.navbar li{
+    font-family: 'Archivo Black', sans-serif;
+    margin: 0 20px;
+    line-height: 75px;
+}
+
+/* Fin de partie de la barre de navigation du site internet */
+
+/* Début partie du menu déroulant sur les héros disponnible dans le jeu */
+div#bannerh{
+    height: 650px;
+    background: url(https://wallpapercave.com/wp/wp5843812.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.3);
+    background-blend-mode: darken;
+}
+
+div#bannerh p.herostitle{
+    padding-top: 250px;
+    font-size: 150px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+    text-shadow: -18px 12px 5px rgba(0,0,0,0.76);
+}
+
+
+div#roleh div{
+    display: flex;
+    text-align: left;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Archivo Black', sans-serif;
+    flex: 1 1 0;
+    width: 0;
+
+}
+
+div#roleh{
+    margin-top: 50px;
+    display: flex;
+}
+
+div#roleh div p{
+    padding-left: 40px;
+    margin-top: 70px;
+}
+
+div#roleh div#buttonroletank {
+    padding-left: 75px ;
+    margin-bottom: 50px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: -8px 8px 5px rgba(0,0,0,1);
+}
+
+div#roleh div#buttonroledps {
+    padding-left: 75px ;
+    margin-bottom: 50px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: -8px 8px 5px rgba(0,0,0,1);
+}
+
+div#roleh div#buttonroleheal {
+    padding-right: 75px ;
+    margin-bottom: 50px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: -8px 8px 5px rgba(0,0,0,1);
+}
+
+div#containertank{
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+    text-shadow: -8px 8px 5px rgba(0,0,0,1);
+    margin-bottom: 100px;
+}
+
+div#containertank p{
+    margin-top: 30px;
+    font-size: 35px;
+    margin-bottom: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    line-height: 50px;
+}
+
+
+div#containertank img{
+    border: 6px solid white;
+    border-radius: 75%;
+}
+
+div#containertank img:hover{
+    background-color: rgba(255,255,255, 1);
+    transition: 0.5s;
+}
+
+div#containerdps{
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+    text-shadow: -8px 8px 5px rgba(0,0,0,1);
+    margin-bottom: 100px;
+}
+
+div#containerdps p{
+    margin-top: 30px;
+    font-size: 35px;
+    margin-bottom: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    line-height: 50px;
+}
+
+div#containerdps img{
+    border: 6px solid white;
+    border-radius: 75%;
+}
+
+div#containerdps img:hover{
+    background-color: rgba(255,255,255, 1);
+    transition: 0.5s;
+}
+
+
+div#containerheal{
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+    text-shadow: -8px 8px 5px rgba(0,0,0,1);
+    margin-bottom: 100px;
+}
+
+div#containerheal p{
+    margin-top: 30px;
+    font-size: 35px;
+    margin-bottom: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    line-height: 50px;
+}
+
+div#containerheal img{
+    border: 6px solid white;
+    border-radius: 75%;
+
+}
+
+div#containerheal img:hover{
+    background-color: rgba(255,255,255, 1);
+    transition: 0.5s;
+}
+
+/* Fin de partie du menu déroulant sur les héros disponnible dans le jeu */
+
+/* Début partie sur le formulaire de contact */
+.contact-section{
+    background-image: url("../img/NeedHelpSection.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.3);
+    background-blend-mode: darken;
+}
+
+.contact-section h2{
+    margin: auto;
+    width: 35%;
+    line-height: 50px;
+    font-size: 42px;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-shadow: -6px 6px 5px rgba(0,0,0,1);
+    padding-top: 30px;
+}
+
+.contact-section p{
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;
+    margin: 5px 5px 20px 5px;
+    color: white;
+}
+
+.field-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.field-container label{
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.field-container input{
+    height: 35px;
+}
+
+.field-container input , .field-container textarea{
+    background-color: #1A1F32;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid #F99E1A;
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+    padding: 20px;
+}
+
+.field-container textarea {
+    text-align: left;
+}
+
+.field-container input::placeholder, .field-container textarea::placeholder{
+    color: white;
+    opacity: 0.3;
+  }
+
+.submit-form{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.submit-form input {
+    font-size: 17px;
+    font-family: 'Archivo', Arial, sans-serif;
+    border: solid 2px #F99E1A;
+    padding: 0 25px;
+    line-height: 40px;
+    text-decoration: none;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    background-color: #1A1F32;
+    color: #ffffff;
+    transition: all 350ms ease-in-out;
+    cursor: pointer;
+}
+
+.submit-form input:hover {
+    background-color: gold;
+    color: black;
+}
+
+
+/* Fin partie sur le formulaire de contact */
+
+/* Début partie liens officiels */
+.official-section h2{
+    margin: auto;
+    width: 35%;
+    line-height: 50px;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-shadow: -6px 6px 5px rgba(0,0,0,1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.official-section footer{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.official-section img{
+    margin-top: 25px;
+    margin-bottom: 25px ;
+}
+
+
+.official-section img.blizzard{
+    width: 150px;
+}
+
+.official-section img.blizzard-shop{
+    width: 200px;
+}
+
+.official-section img.overwatch-league{
+    width: 150px;
+}
+
+.official-section img:hover{
+    filter: saturate(4);
+}
+
+/* Fin partie liens officiels */    

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overwatch 2 - Jouez maintenant gratuitement !</title>
+    <meta name="description"
+          content="Overwatch est un jeu vidéo gratuit de tir à la première personne (FPS) en ligne en 5 contre 5, choisissez parmi nos 35 héros et battez-vous aux quatre coins du monde.">
+    <link rel="icon"
+          href="data:image/png;base64,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"
+          type="image/x-icon">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/main.css">
+
+</head>
+
+<body>
+<!-- page d'acceuil du site internet -->
+<div class="bg-home">
+    <img src="src/img/logo_written.png" alt="logo Overwatch 2 écrit">
+    <h1>Jouez en équipe - Accès gratuit</h1>
+</div>
+
+<!-- barre de navigation du site internet -->
+<nav class="navbar">
+    <ul>
+        <li><img class="logo" src="src/img/logo.png" alt="logo overwatch 2">
+        <li><a href="#">informations</a></li>
+        <li><a href="#scroll-game-section">jeu</a></li>
+        <li><a href="#scroll-contact-section">contactez-nous</a></li>
+        <li><a href="#scroll-official-section">liens officiels</a></li>
+    </ul>
+</nav>
+<!--Description-->
+<div class="description">
+
+    <!--premiere partie-->
+    <h2 class="first-divider">Description d'Overwatch</h2>
+    <div class="container-first">
+        <div class="quote-1">
+            <iframe src="https://www.youtube.com/embed/pwFu8kEsUW4?start=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="quote-2">
+            <h3>Entrez dans l'univers d'overwatch </h3>
+            <p>
+                <strong>Overwatch 2 est un jeu d’action en équipe en accès gratuit</strong> qui prend place dans un avenir optimiste et où chaque partie est une bataille en 5c5. Incarnez plus de 30 autres personnages originaux tout en combattant aux quatre coins du monde.</p>
+        </div>
+    </div>
+
+    <div id="scroll-game-section">
+        <!--deuxieme partie-->
+        <h2>Les cartes d'Overwatch</h2>
+        <div class="container-two">
+            <div class="quote-1">
+                <h3>Voyagez héros !</h3>
+                <p>Parcourez le monde et combattez aux quatre coins de la planète.</p>
+            </div>
+
+            <div class="quote-2">
+                <div>
+                    <img src="src/img/paris-overwatch.jpg" alt="Overwatc-map-france">
+                    <h4>France</h4>
+                </div>
+
+                <div>
+                    <img src="src/img/eichenwalde-overwatch.jpg" alt="Overwatch-map-allemagne">
+                    <h4>Allemagne</h4>
+                </div>
+
+                <div>
+                    <img src="src/img/oasis-overwatch.jpg" alt="Overwatch-map-irak">
+                    <h4>Irak</h4>
+                </div>
+
+                <div>
+                    <img src="src/img/lijiang-tower-overwatch.jpg" alt="Oerwatch-map-chine">
+                    <h4>Chine</h4>
+                </div>
+            </div>
+            <p>Il existe 21 cartes différentes à découvrir sur Overwatch.</p>
+        </div>
+
+        <!--troisieme partie-->
+        <h2>Les règles d'Overwatch</h2>
+        <div class="container-three">
+            <div class="quote-1">
+                <img src="src/img/play_.png" alt="play_button">
+                <h3>Choisis un mode de jeu</h3>
+            </div>
+
+            <div class="quote-1">
+                <img src="src/img/gengi_tete.png" alt="gengi-head">
+                <h4>Choisis ton héros</h4>
+            </div>
+
+            <div class="quote-1">
+                <img src="src/img/ult-g.png" alt="gengi-ultimate-icon">
+                <h5>Affronte tes adversaires</h5>
+            </div>
+
+        </div>
+
+        <!--quatrieme partie-->
+        <h2>Les modes d'Overwatch</h2>
+        <div class="container-four">
+            <div class="quote quote-1">
+                <h3>Parties<br>rapides</h3>
+                <p>Des parties ressemblant aux parties classées mais qui se terminent en une seule manche.</p>
+            </div>
+
+            <div class="quote quote-2">
+                <h3>Parties<br>arcades</h3>
+                <p>Des parties avec des modes de jeux differents permettant de s'évader des parties habituelles.</p>
+            </div>
+
+            <div class="quote quote-3">
+                <h3>Parties<br>classées</h3>
+                <p>Des parties de plusieurs manches où l'on met son rang en jeu.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Début partie du menu déroulant sur les héros disponnible dans le jeu  -->
+<div id="content">
+    <div id="bannerh">
+        <p class="herostitle">
+            HÉROS
+        </p>
+    </div>
+
+    <div id="roleh" class="role-control">
+        <div id="buttonroletank" class="t-btn" data-role="tanks">
+            <img src="src/img/TANK.webp" width="200" height="200" alt="Tank Icon">
+            <p id="p-tank">
+                TANKS
+                <span id="span-tank" class="material-symbols-outlined">expand_more</span>
+            </p>
+        </div>
+
+        <div id="buttonroledps" class="t-btn">
+            <img src="src/img/DPS.webp" width="200" height="200" alt="Dps Icon">
+            <p id="p-dps">
+                DPS
+                <span id="span-dps" class="material-symbols-outlined">expand_more</span>
+            </p>
+        </div>
+
+        <div id="buttonroleheal" class="t-btn">
+            <img src="src/img/HEAL.webp" width="200" height="200" alt="Heal Icon">
+            <p id="p-heal">
+                HEALS
+                <span id="span-heal" class="material-symbols-outlined">expand_more</span>
+            </p>
+        </div>
+    </div>
+
+    <div id="containertank" style="display: none;">
+        <h3> TANK </h3>
+        <p> Les tanks sont là pour encaisser les dégâts et s’attaquer à des positions stratégiques, qu’il s’agisse
+            d’ennemis groupés ou de points d’étranglement. Si vous êtes un tank, c’est à vous de mener la charge. </p>
+        <img src="src/img/icon-dva.png" alt="icon-dva">
+        <img src="src/img/icon-doom.png" alt="icon-doom">
+        <img src="src/img/icon-junker.png" alt="icon-junker">
+        <img src="src/img/icon-orisa.png" alt="icon-orisa">
+        <img src="src/img/icon-rein.png" alt="icon-rein">
+        <img src="src/img/icon-hog.png" alt="icon-hog">
+        <img src="src/img/icon-sigma.png" alt="icon-sigma.png">
+        <img src="src/img/icon-winston.png" alt="icon-winston">
+        <img src="src/img/icon-ball.png" alt="icon-ball.png">
+        <img src="src/img/icon-zarya.png" alt="icon-zarya">
+    </div>
+
+    <div id="containerdps" style="display: none;">
+        <h3> DPS </h3>
+        <p> Les spécialistes des dégâts traquent, attaquent et éliminent l’ennemi avec toutes sortes d’outils, de
+            capacités et de styles de jeu. Redoutables mais fragiles, ces personnages ont besoin de renforts pour
+            survivre. </p>
+        <img src="src/img/icon-ash.png" alt="icon-ash">
+        <img src="src/img/icon-bastion.png" alt="icon-bastion">
+        <img src="src/img/icon-cassidy.png" alt="icon-cassidy">
+        <img src="src/img/icon-echo.png" alt="icon-echo">
+        <img src="src/img/icon-genji.png" alt="icon-genji">
+        <img src="src/img/icon-hanzo.png" alt="icon-hanzo">
+        <img src="src/img/icon-junkrat.png" alt="icon-junkrat">
+        <img src="src/img/icon-mei.png" alt="icon-mei">
+        <img src="src/img/icon-pharah.png" alt="icon-pharah">
+        <img src="src/img/icon-reaper.png" alt="icon-reaper">
+        <img src="src/img/icon-sojourn.png" alt="icon-sojourn">
+        <img src="src/img/icon-soldier.png" alt="icon-soldier">
+        <img src="src/img/icon-sombra.png" alt="icon-sombra">
+        <img src="src/img/icon-sym.png" alt="icon-sym">
+        <img src="src/img/icon-torb.png" alt="icon-torb">
+        <img src="src/img/icon-tracer.png" alt="icon-tracer">
+        <img src="src/img/icon-widow.png" alt="icon-widow">
+    </div>
+
+    <div id="containerheal" style="display: none;">
+        <h3> SUPPORT </h3>
+        <p> Les personnages de soutien assistent leurs alliés en leur procurant des soins et des boucliers, en
+            augmentant leurs dégâts et en neutralisant les menaces. Votre rôle de soutien vous rend indispensable à la
+            survie de votre équipe. </p>
+        <img src="src/img/icon-ana.png" alt="icon-ana">
+        <img src="src/img/icon-bapt.png" alt="icon-bapt">
+        <img src="src/img/icon-brig.png" alt="icon-brig">
+        <img src="src/img/icon-kiriko.png" alt="icon-kiriko">
+        <img src="src/img/icon-lucio.png" alt="icon-lucio">
+        <img src="src/img/icon-mercy.png" alt="icon-mercy">
+        <img src="src/img/icon-moira.png" alt="icon-moira">
+        <img src="src/img/icon-zen.png" alt="icon-zen">
+    </div>
+</div>
+<!-- Fin partie du menu déroulant sur les héros disponnible dans le jeu -->
+
+<!-- Début Formulaire  -->
+<div id="scroll-contact-section" class="contact-section">
+    <h2>Besoin d'aide ?</h2>
+    <p>Contactez notre support via ce formulaire ! </p>
+    <form action="#" name="contact-form" autocomplete="off">
+        <div class="field-container">
+            <label for="pseudo">Pseudo</label>
+            <input id="pseudo" name="pseudo" type="text" required placeholder="JFKPLN">
+        </div>
+        <div class="field-container">
+            <label for="first-name">Prénom</label>
+            <input id="first-name" name="first-name" type="text" required placeholder="Jeff">
+        </div>
+        <div class="field-container">
+            <label for="last-name">Nom</label>
+            <input id="last-name" name="last-name" type="text" required placeholder="Kapplan">
+        </div>
+        <div class="field-container">
+            <label for="email">Adresse Email</label>
+            <input id="email" name="email" type="email" required placeholder="monadresse@email.com">
+        </div>
+        <div class="field-container">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" cols="50" rows="15" placeholder="Entrez votre message ici..." required></textarea>
+        </div>
+        <div class="submit-form">
+            <input type="submit" value="Envoyer">
+        </div>
+    </form>
+</div>
+<!-- Fin Formulaire -->
+
+<!-- Début section des liens officiels -->
+<div id="scroll-official-section" class="official-section">
+    <h2> Rejoignez la cavalerie !</h2>
+    <footer>
+        <a href="https://www.blizzard.com/fr-fr/" target="_blank" rel="nofollow"><img class="blizzard" src="src/img/blizzard_logo.svg.png" alt="logo blizzard entertainment"></a>
+        <a href="https://gear.blizzard.com/collections/overwatch" target="_blank" rel="nofollow"><img class="blizzard-shop" src="src/img/Blizzard-Gear.png" alt="logo blizzard gear"></a>
+        <a href="https://www.overwatchleague.com/fr-fr" target="_blank" rel="nofollow"><img class="overwatch-league" src="src/img/logo-owl.jpg" alt="logo blizzard gear"></a>
+    </footer>
+</div>
+<!-- Fin section des liens officiels -->
+
+<script>
+
+    const btntank = document.querySelector("#buttonroletank");
+    const containerttank = document.querySelector("#containertank");
+    const spantank = document.querySelector("#span-tank");
+    const ptank = document.querySelector("#p-tank");
+
+    btntank.addEventListener("click", function () {
+        if (containertank.style.display === "none") {
+            containertank.style.display = "block";
+            spantank.innerHTML = "expand_less";
+            ptank.style.color = "#ffbe33";
+        } else {
+            containertank.style.display = "none";
+            spantank.innerHTML = "expand_more";
+            ptank.style.color = "white";
+        }
+    });
+
+    const btndps = document.querySelector("#buttonroledps");
+    const containerdps = document.querySelector("#containerdps");
+    const spandps = document.querySelector("#span-dps");
+    const pdps = document.querySelector("#p-dps");
+
+    btndps.addEventListener("click", function () {
+        if (containerdps.style.display === "none") {
+            containerdps.style.display = "block";
+            spandps.innerHTML = "expand_less";
+            pdps.style.color = "red";
+        } else {
+            containerdps.style.display = "none";
+            spandps.innerHTML = "expand_more";
+            pdps.style.color = "white";
+        }
+    });
+
+
+    const btnheal = document.querySelector("#buttonroleheal");
+    const containerheal = document.querySelector("#containerheal");
+    const spanheal = document.querySelector("#span-heal");
+    const pheal = document.querySelector("#p-heal");
+
+    btnheal.addEventListener("click", function () {
+        if (containerheal.style.display === "none") {
+            containerheal.style.display = "block";
+            spanheal.innerHTML = "expand_less";
+            pheal.style.color = "#3ed526";
+        } else {
+            containerheal.style.display = "none";
+            spanheal.innerHTML = "expand_more";
+            pheal.style.color = "white";
+        }
+    });
+
+</script>
+</body>
+</html>

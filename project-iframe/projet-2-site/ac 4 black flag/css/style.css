@@ -1,0 +1,355 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+  background-image: url("../img/backac.webp"), url("../img/acanimus.jpg");
+  background-attachment: fixed, fixed;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, cover;
+  background-position: center, center;
+  margin: 0px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.logo{
+    background-image: url("../img/ac_background_p.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    background-size: cover;
+    margin: 0px;
+    border-bottom-color: #9f8b2e;
+    border-bottom-style: solid;
+}
+
+.logo nav{
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  background-size: cover;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logo nav ul li {
+  display: inline-flex;
+}
+
+.logo nav ul li a {
+  display: block;
+  color: white;
+  opacity: 1;
+  padding: 10px 14px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.logo nav ul li a:hover {
+  background-color: rgba(243 ,  0 , 0 , 0.3);
+  margin: auto;
+  background-size: cover;
+}
+
+.title1{
+  display: flex;
+  margin-top: 30px;
+}
+
+.para1{
+  background-image: url("../img/ac_4_animus.jpg");
+  margin-right: 100px;
+  margin-left: 1000px;
+  margin-top: 175px;
+  padding: 1px 12px;
+  border-radius: 25px 25px 25px 25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#p1{
+  background-color: #b9b9b9;
+  border-radius: 25px 25px 25px 25px;
+  padding: 1px 18px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.picture1{
+  display: block;
+  margin-left: 125px;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.picture1 img /* Used for picture14 and picture2*/ {
+  border: 3px solid #4a0000bd;
+  border-radius: 2px 25px 40px 2px;
+  padding: 5px;
+}
+
+.para2{
+  background-image: url("../img/ac_4_animus.jpg");
+  margin-right: 100px;
+  margin-left: 1000px;
+  margin-top: 175px;
+  padding: 1px 12px;
+  border-radius: 25px 25px 25px 25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#p2{
+  background-color: #b9b9b9;
+  border-radius: 25px 25px 25px 25px;
+  padding: 1px 18px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.para3{
+  background-image: url("../img/ac_4_animus.jpg");
+  margin-right: 100px;
+  margin-left: 1000px;
+  margin-top: 175px;
+  padding: 1px 12px;
+  border-radius: 25px 25px 25px 25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#p3{
+  background-color: #b9b9b9;
+  border-radius: 25px 25px 25px 25px;
+  padding: 1px 18px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.title2{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 170px;
+}
+
+.para4{
+  background-image: url("../img/ac_rogue_animus.jpg");
+  margin-right: 1000px;
+  margin-left: 100px;
+  margin-top: 175px;
+  padding: 1px 12px;
+  border-radius: 25px 25px 25px 25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#p4{
+  background-color: #b9b9b9;
+  border-radius: 25px 25px 25px 25px;
+  padding: 1px 18px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.picture3{
+  display: block;
+  margin-left: 1057px;
+  margin-right: 125px;
+  margin-top: 50px;
+}
+
+.picture3 img {
+  border: 3px solid #4a0000bd;
+  border-radius: 25px 2px 2px 40px;
+  padding: 5px;
+  max-width: 100%;
+  height: auto;
+}
+
+.para5{
+  background-image: url("../img/ac_rogue_animus.jpg");
+  margin-right: 1000px;
+  margin-left: 100px;
+  margin-top: 175px;
+  padding: 1px 12px;
+  border-radius: 25px 25px 25px 25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#p5{
+  background-color: #b9b9b9;
+  border-radius: 25px 25px 25px 25px;
+  padding: 1px 18px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.nintendo{
+  background-image: url("../img/ac_background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  border-style: solid;
+  border-color: #9f8b2e;
+  border-width: medium;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  margin-top: 300px;
+}
+
+.nintendo ul li{
+  width: 45%;
+  margin: auto;
+  padding: 0px;
+}
+
+.nintendo ul{
+  list-style-type: none;
+}
+
+#logoblanc{
+  padding-left: 45px;
+  padding-right: auto;
+}
+
+#logotemplier{
+  margin-right: 225px;
+  margin-left: auto;
+}
+
+#nintendo-title{
+  text-align: center;
+  text-decoration: underline;
+  padding-left: 0px;
+}
+
+#ul2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 0px;
+  margin-left: 130px;
+}
+
+#ul2 ul li{
+  width: 70%;
+}
+
+#nintendo-upgrade{
+  text-align: center;
+}
+
+.title3{
+  background-color: #b9b9b9;;
+  text-align: center;
+  margin-top: 0px;
+  padding: 1px 15px;
+  font-weight: bold;
+}
+
+.trailerswitch{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.title4{
+  background-color: #b9b9b9c2;
+  text-align: center;
+  margin-top: 0px;
+  padding: 1px 1px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.trailer{
+  display: flex;
+  justify-content: center;
+}
+
+.trailer::after {
+  content: "";
+  clear: both;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.video1{
+  margin-right: 80px;
+}
+
+.video2{
+  margin-left: 80px;
+}
+
+/*scripts class*/
+.hide-picture{
+  background-image: url("../img/ac_background_p.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  background-size: cover;
+  border-bottom-color: #9f8b2e;
+  border-bottom-style: solid;
+}
+
+.acgames {
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+.acgames a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.acgames a:hover {
+  background-color: gray;
+  color: white;
+  margin: auto;
+}
+
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .head-font{
+  padding-top: 102px;
+}
