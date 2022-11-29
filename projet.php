@@ -19,40 +19,33 @@
         <link rel="Icon" href="img/logo-gc.jpg">
   </head>
 
-        <title>Projet 2 - Assassin's Creed</title>
+        <title>Projet 1 - Overwatch</title>
       </head>
 
 <body>
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-            <ul id="nav-mobile">
-                <li><a  class="home-button" href="index.html"><span class="material-icons">home</span></a></li>
-                <li><a href="projet1.html" target="_blank">Projet 1</a></li>
-                <li><a href="projet3.html" target="_blank">Projet 3</a></li>
-                <li class="switch right"><label><input type="checkbox"><span class="lever"></span></label></li>
-                <li class="right"><i class="material-icons dark-mode-icon left">wb_sunny</i></a></li>
-            </ul>
-            </div>
-        </nav>
-    </div>
+<?php require "menu.php"; ?>
 
     <div class="parallax-container">
-        <div class="parallax background-project-ac"><img src="img/backgroundAC.jpg">
+        <div class="parallax background-project-ow"><img src="img/ow-background.jpg">
+        </div>
+        <div class="row button-egg-ow">
+            <div class="col s12 offset-s6 ">
+                <button><a href="img/genji.jpg" target="_blank">genji</a></button>
+            </div>
         </div>
     </div>
 
     <!-- Description et explications du projet -->
 
-      <div class="row game-presentation">
+    <div class="row game-presentation">
         <div class="col s12">
           <div class="card-panel game-card">
-                <h1 class="black-text-css underline center">Projet 2 - Site Assassin's Creed</h1>
+                <h1 class="black-text-css underline center">Projet 1 - Site Overwatch</h1>
                 <p class="flow-text black-text-css center text-project-card"> 
                     <br>
-                    Ce projet est le premier projet réalisé par Lilian au cours de sa première année en G.Tech 1 au Gaming Campus de Lyon.<br>
+                    Ce projet est le premier projet réalisé par Romain au cours de sa première année en G.Tech 1 au Gaming Campus de Lyon.<br>
                     Le but était de créer un site web, en HTML et CSS, afin de faire de la présentation son jeu préféré.<br> <br>
-                    Le projet a été réalisé en 1 semaine en groupe avec un camarade : <br> - Robin ( rfrouin@gaming.tech ) <br><br>
+                    Le projet a été réalisé en 1 semaine en groupe avec deux camarades : <br> - Guillherme ( gcoelhovieira@gaming.tech ) <br> - Mattéo ( mstampanoni@gaming.tech )<br><br>
                     Le trinôme devait répondre à un cahier des charges précis comme un menu de navigation vers le site officiel ou encore des description, des images et une vidéo de gameplay du jeu issue de Youtube.
                     Le tout devait tenir sur une seule page web et être optimiser avec le SEO, pour le référencement. 
                     Les élèves devaient faire preuve d'imagination et de professionnalisme afin de créer un site esthétique que ce soit dans la partie visuel ou pour la partie du codage. <br> <br>
@@ -62,7 +55,7 @@
         </div>
         <div class="col s12 hide-on-med-and-down card-site">
             <div class="card-panel game-card">
-                <iframe class="iframe-site" src="project-iframe/projet-2-site/ac 4 black flag/index.html" frameborder="0"></iframe>
+                <iframe class="iframe-site" src="project-iframe/projet-1-site/index.html" frameborder="0"></iframe>
             </div>
         </div>
     </div>

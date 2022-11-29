@@ -201,3 +201,8 @@ a.a-link-text{
     padding: 10px!important;
     opacity: 0%;
 }
+
+.form-style{
+    padding-left: 100px!important;
+    padding-right: 100px!important;
+}
