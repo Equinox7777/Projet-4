@@ -23,7 +23,7 @@
       </head>
 
 <body>
-<?php require "menu.php"; ?>
+    <?php require "menu.php"; ?>
 
     <div class="parallax-container">
         <div class="parallax background-project-ow"><img src="img/ow-background.jpg">

@@ -22,21 +22,7 @@
 
 <body>
   
-<div class="navbar-fixed">
-  <nav>
-      <div class="nav-wrapper">
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-            <li><i class="material-icons dark-mode-icon left">wb_sunny</i></a></li>
-            <li class="switch"><label><input type="checkbox"><span class="lever"></span></label></li>
-        </ul>
-      </div>
-  </nav>
-</div>
-  <ul id="slide-out" class="sidenav">
-    <li><i class="material-icons dark-mode-icon icon-margin left">wb_sunny</i></a></li>
-    <li class="switch"><label><input type="checkbox"><span class="lever"></span></label></li>
-  </ul>
+  <?php require "menu.php"; ?>
   
   <div class="parallax-container">
     <div class="parallax"><img src="img/gc-banner.jpg">
@@ -44,7 +30,7 @@
   </div>
 
 
-<div class="row team">
+  <div class="row team">
     <div class="col s6">
         <div class="col s12 m8 offset-m2 l6 offset-l3">
             <div class="card-panel z-depth-1 card-bg">
@@ -88,38 +74,38 @@
               </div>
           </div>
       </div>
-</div>
-
-<div class="row">
-  <div class="col s12">
-    <h2 class="black-text-css titre-projet">
-      Plongez vous dans les 3 projets presentés en dessous !
-    </h2>
   </div>
-</div>
 
-
-<div class="carousel">
-  <div class="carousel carousel-slider center">
-    <div class="carousel-item white-text-css carousel-img-ow">
-      <h2 class="title-carousel " >Projet 1</h2>
-      <p class="white-text-css">Site Overwatch</p>
-      <a id="btn-carousel" class="btn-large btn-carousel black-text-css pulse" href="projet1.html" target="_blank">Découvrir <i class="material-icons right">launch</i></a>
-    </div>
-    <div class="carousel-item white-text-css carousel-img-ac">
-      <h2 class="title-carousel ">Projet 2</h2>
-      <p class="white-text-css" >Site Assassin's Creed</p>
-      <a id="btn-carousel" class="btn-large btn-carousel black-text-css pulse" href="projet2.html" target="_blank">Découvrir <i class="material-icons right">launch</i></a>
-    </div>
-    <div class="carousel-item green white-text-css carousel-img-three">
-      <h2 class="title-carousel ">Projet 3</h2>
-      <p class="white-text-css" >projet 3</p>
-      <a id="btn-carousel" class="btn-large btn-carousel black-text-css pulse" href="projet3.html" target="_blank">Découvrir <i class="material-icons right">launch</i></a>    
+  <div class="row">
+    <div class="col s12">
+      <h2 class="black-text-css titre-projet">
+        Plongez vous dans les 3 projets presentés en dessous !
+      </h2>
     </div>
   </div>
-</div>
 
-<div id="modal1" class="modal">
+
+  <div class="carousel">
+    <div class="carousel carousel-slider center">
+      <div class="carousel-item white-text-css carousel-img-ow">
+        <h2 class="title-carousel " >Projet 1</h2>
+        <p class="white-text-css">Site Overwatch</p>
+        <a id="btn-carousel" class="btn-large btn-carousel black-text-css pulse" href="projet1.html" target="_blank">Découvrir <i class="material-icons right">launch</i></a>
+      </div>
+      <div class="carousel-item white-text-css carousel-img-ac">
+        <h2 class="title-carousel ">Projet 2</h2>
+        <p class="white-text-css" >Site Assassin's Creed</p>
+        <a id="btn-carousel" class="btn-large btn-carousel black-text-css pulse" href="projet2.html" target="_blank">Découvrir <i class="material-icons right">launch</i></a>
+      </div>
+      <div class="carousel-item green white-text-css carousel-img-three">
+        <h2 class="title-carousel ">Projet 3</h2>
+        <p class="white-text-css" >projet 3</p>
+        <a id="btn-carousel" class="btn-large btn-carousel black-text-css pulse" href="projet3.html" target="_blank">Découvrir <i class="material-icons right">launch</i></a>    
+      </div>
+    </div>
+  </div>
+
+  <div id="modal1" class="modal">
           <div class="card contact-card">
             <div class="card-content">
               <div class="container">
