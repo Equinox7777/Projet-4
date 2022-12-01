@@ -82,7 +82,7 @@ h2.titre-projet{
     font-family: 'Outfit', sans-serif;
 }
 
-.carousel-img-ow{
+/* .carousel-img-ow{
     background-image: url(../img/ow2-background-home.jpeg);
     background-size: cover;
     background-position: left;
@@ -98,7 +98,7 @@ h2.titre-projet{
     background-image: url(../img/elden-ring-background-home.jpeg);
     background-position: center;
     background-size: cover;
-}
+} */
 
 .title-carousel{
     text-transform: uppercase!important;
@@ -203,6 +203,72 @@ a.a-link-text{
 }
 
 .form-style{
-    padding-left: 100px!important;
-    padding-right: 100px!important;
+    /* width: 50%!important; */
+    text-align: center!important;
+    padding-left: 800px!important;
+    padding-right: 800px!important;
+}
+
+.form-text{
+    text-align: center!important;
+    margin-bottom: 50px!important;
+}
+
+h2.form-title{
+    text-align: center!important;
+}
+
+.submit-button{
+    background-color: var(--main-color)!important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.btn-adminpanel{ 
+    background-color: var(--main-color)!important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.textarea-admin{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.text-center{
+    text-align: center!important;
+}
+
+.list-text{
+    font-size: 20px!important;
+}
+
+.white-text-css-all{
+    color: white;
+}
+
+.btn-user-display{
+    display: flex;
+}
+
+.admin-icon{
+    font-size: 18px!important;
+}
+
+h1.parallax-middle{
+    padding-top: 175px!important;
+}
+
+.display-admin{
+    display: flex!important;
+}
+
+.textarea-style{
+    height: 150px!important;
+    width: 875px!important;
 }

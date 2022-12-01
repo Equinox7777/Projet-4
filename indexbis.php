@@ -24,7 +24,16 @@
 <body>
   
 <?php require "components/menu.php"; ?>
-  
+
+<div class="green white-text-css-all text-center">
+    <?php 
+      if(isset($_SESSION['success'])){
+	      echo $_SESSION['success'];
+	      unset($_SESSION['success']);
+      } 
+      ?>
+  </div>
+
   <div>
     <h1 class="black-text-css text-center"><?php echo "Bienvenue sur le site \" " . $_SESSION['user']['username'] . " \" !"; ?></h1>
   </div>
@@ -84,9 +93,10 @@
     foreach($data as $project){ ?>
     <div class="project-display">
       <h2 class="black-text-css"><?php echo $project['title']?></h2>
-      
+      <p class="black-text-css"><?php echo $project['text-intro']?></p>
+      <img src="<?php echo $project['img']?> " alt="project-img">
 
-        <div class="btn-user-display">
+        <!-- <div class="btn-project-display">
 
           <form method="post" action="actions/changeusername.php">
               <input class = "textarea-admin" type='textarea' name="username" value = "<?php echo $user['username'] ?>" />
@@ -105,10 +115,9 @@
               <button class="btn-adminpanel black-text-css" type="submit"><span class="material-icons admin-icon">delete</span></button>
           </form>
 
-        </div>
+        </div> -->
       <?php } ?>
     </div>
-  </div>
 
 
 <!--  -->
@@ -117,11 +126,17 @@
 <div id="modal1" class="modal">
           <div class="card contact-card">
             <div class="card-content">
-              <span class="bold card-title black-text-css">Contactez nous !</span>
-              <p class="black-text-css contact-text"><i class="material-icons mail-icon">mail</i>
-                Emails :
-                <p class="black-text-css email-text"><?php echo $index_page['contact_email'] ?></p>
-              </p>
+              <div class="container">
+                <h3>Formulaire de contact</h3>
+                <form action="actions/mail.php" method="post">
+                  <input type="text" name="email" value="" placeholder=" Votre email">
+                  <input type="text" name="objet" value="" placeholder="L'objet du mail">
+                  <input type="textarea" class="textarea-style" name="content" value="" placeholder="Ecrivez nous ici">
+                  <input type="hidden" name="ownemail" value="" placeholder=" Votre email">
+                  <input type="submit" value="Envoyer" >
+                </form>
+              </div>
+
               <div class="modal-footer">
                 <a href="#!" class="modal-close btn-flat black-text-css"><i class="material-icons">close</i></a>
               </div>
