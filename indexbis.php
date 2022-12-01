@@ -24,12 +24,18 @@
 <body>
   
 <?php require "components/menu.php"; ?>
+<?php
+    if(!isset($_SESSION['user']) || ($_SESSION['user']['admin'] == 0 )){
+        header('Location:homelog.php');
+        exit();
+    } ?>
+
 
 <div class="green white-text-css-all text-center">
     <?php 
-      if(isset($_SESSION['error'])){
-	      echo $_SESSION['error'];
-	      unset($_SESSION['error']);
+      if(isset($_SESSION['success'])){
+	      echo $_SESSION['success'];
+	      unset($_SESSION['success']);
       } 
       ?>
 </div>
@@ -43,9 +49,26 @@
       ?>
 </div>
 
-  <div>
-    <h1 class="black-text-css text-center"><?php echo "Bienvenue sur le site \" " . $_SESSION['user']['username'] . " \" !"; ?></h1>
-  </div>
+<div class = "btn-panel">
+    <a class = "btn-panel" href="adminchoice.php">Page Admin</a>
+</div>
+
+<?php
+$sql = "SELECT * FROM alltext"; 
+$pre = $pdo->prepare($sql); 
+$pre->execute();
+$alltext = $pre->fetch(PDO::FETCH_ASSOC);
+
+?>
+
+<div>
+    <form method="post" action="actions/changetitle.php">
+        <h1 class="black-text-css text-center"><input type='textarea' name="title" value = "<?php echo $alltext['title']." ".$_SESSION['user']['username'] ?>" />
+        <input type='hidden' name="id" value = "<?php echo $alltext['id'] ?>" />
+        <button class="black-text-css" type="submit">Modifier</button>
+    </form>
+</div>
+
 
 <?php
 $sql = "SELECT * FROM index_page"; 
@@ -61,7 +84,11 @@ $index_page = $pre->fetch(PDO::FETCH_ASSOC);
             <div class="card-panel z-depth-1 card-bg">
               <div class="row valign-wrapper">
                   <span class="black-text-css">
-                    <?php echo $index_page['intro_eleve1'] ?>
+                  <form method="post" action="actions/changeintro.php">
+                    <p class="black-text-css text-center"><input type='textarea' style="width : 400px; height : 100px" name="intro_eleve1" value = "<?php echo $index_page['intro_eleve1'] ?>" />  </p>
+                    <input type='hidden' name="id" value = "<?php echo $index_page['id'] ?>" />
+                    <button class="black-text-css" type="submit">Modifier</button>
+                  </form>
                 </span>
             </div>
         </div>
@@ -75,7 +102,11 @@ $index_page = $pre->fetch(PDO::FETCH_ASSOC);
             <div class="card-panel z-depth-1 card-bg">
                 <div class="row valign-wrapper">               
                         <span class="black-text-css">
-                            <?php echo $index_page['intro_eleve2'] ?>
+                        <form method="post" action="actions/changeintro2.php">
+                            <p class="black-text-css text-center"><input type='textarea' style="width : 400px; height : 100px" name="intro_eleve2" value = "<?php echo $index_page['intro_eleve2'] ?>" />  </p>
+                            <input type='hidden' name="id" value = "<?php echo $index_page['id'] ?>" />
+                            <button class="black-text-css" type="submit">Modifier</button>
+                        </form>
                         </span>
                   </div>
               </div>
@@ -84,38 +115,25 @@ $index_page = $pre->fetch(PDO::FETCH_ASSOC);
 </div>
 
 
-
-<h2 class="black-text-css" >Les Projets :</h2>
-    <!--  -->
-    <div class="container">
-        <h3>Ajouter un projet</h3>
-        <form action="actions/addproject.php" method="post" enctype="multipart/form-data">
-            <input type="text" name="title" value="" placeholder="Titre">
-            <input type="file" name="img" value="" placeholder="L'objet du mail">
-            <input type="text" name="txt_intro" value="" placeholder="Présentation">
-            <input type="submit" value="Envoyer" >
-        </form>
-    </div>
-    <!--  -->
-    <?php
-    $sql = "SELECT * FROM project"; 
-    $pre = $pdo->prepare($sql); 
-    $pre->execute();
-    $data = $pre->fetchAll(PDO::FETCH_ASSOC);
-   
-    foreach($data as $project){ ?>
-    <div class="project-display">
-      <h2 class="black-text-css text-center"><?php echo $project['title']?></h2>
-      <div class="text-center">
-        <img src="<?php echo $project['img']?> " alt="project-img">
-      </div>
-      <p class="black-text-css  text-center"><?php echo $project['txt_intro']?></p>
-      <?php } ?>
-    </div>
+<div>
+    <form method="post" action="actions/changetitleproject.php">
+        <h2 class="black-text-css" ><input type='textarea' name="title_project" value = "<?php echo $alltext['title_project'] ?>" /></h2>
+        <input type='hidden' name="id" value = "<?php echo $alltext['id'] ?>" />
+        <button class="black-text-css" type="submit">Modifier</button>
+    </form>
+</div>
 
 
-<!--  -->
+<div>
+  <img src="<?php echo $index_page['img'] ?>">
+</div>  
 
+<div>
+<form method="post" enctype="multipart/form-data" action="actions/changeimg.php">
+  <input type="file" name="img">
+  <input type='hidden' name="id" value = "<?php echo $index_page['id'] ?>" />
+  <button class="black-text-css" type="submit">Modifier</button>
+</div>  
 
 <div id="modal1" class="modal">
           <div class="card contact-card">

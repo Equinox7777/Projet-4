@@ -27,9 +27,9 @@
 
 <div class="green white-text-css-all text-center">
     <?php 
-      if(isset($_SESSION['error'])){
-	      echo $_SESSION['error'];
-	      unset($_SESSION['error']);
+      if(isset($_SESSION['success'])){
+	      echo $_SESSION['success'];
+	      unset($_SESSION['success']);
       } 
       ?>
 </div>
@@ -43,8 +43,17 @@
       ?>
 </div>
 
+<?php
+$sql = "SELECT * FROM alltext"; 
+$pre = $pdo->prepare($sql); 
+$pre->execute();
+$alltext = $pre->fetch(PDO::FETCH_ASSOC);
+
+?>
+
+
   <div>
-    <h1 class="black-text-css text-center"><?php echo "Bienvenue sur le site \" " . $_SESSION['user']['username'] . " \" !"; ?></h1>
+    <h1 class="black-text-css text-center"><?php echo $alltext['title'] . "\" ". $_SESSION['user']['username'] . " \" !"; ?></h1>
   </div>
 
 <?php
@@ -84,38 +93,12 @@ $index_page = $pre->fetch(PDO::FETCH_ASSOC);
 </div>
 
 
+<h2 class="black-text-css" ><?php echo $alltext['title_project'] ?></h2>
+  <a class = "btn-panel" href="project.php">ici</a>
 
-<h2 class="black-text-css" >Les Projets :</h2>
-    <!--  -->
-    <div class="container">
-        <h3>Ajouter un projet</h3>
-        <form action="actions/addproject.php" method="post" enctype="multipart/form-data">
-            <input type="text" name="title" value="" placeholder="Titre">
-            <input type="file" name="img" value="" placeholder="L'objet du mail">
-            <input type="text" name="txt_intro" value="" placeholder="Présentation">
-            <input type="submit" value="Envoyer" >
-        </form>
-    </div>
-    <!--  -->
-    <?php
-    $sql = "SELECT * FROM project"; 
-    $pre = $pdo->prepare($sql); 
-    $pre->execute();
-    $data = $pre->fetchAll(PDO::FETCH_ASSOC);
-   
-    foreach($data as $project){ ?>
-    <div class="project-display">
-      <h2 class="black-text-css text-center"><?php echo $project['title']?></h2>
-      <div class="text-center">
-        <img src="<?php echo $project['img']?> " alt="project-img">
-      </div>
-      <p class="black-text-css  text-center"><?php echo $project['txt_intro']?></p>
-      <?php } ?>
-    </div>
-
-
-<!--  -->
-
+<div>
+  <img src="<?php echo $index_page['img'] ?>">
+</div>  
 
 <div id="modal1" class="modal">
           <div class="card contact-card">
@@ -138,7 +121,7 @@ $index_page = $pre->fetch(PDO::FETCH_ASSOC);
           </div>
         </div>
   </div>
-
+    
   <div class="parallax-container">
     <div class="center" style="line-height: 500px;">
       <button data-target="modal1" class="button-grey waves-effect waves-light modal-trigger btn-large">Contact</button>

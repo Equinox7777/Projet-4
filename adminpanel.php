@@ -22,6 +22,12 @@
   
   <?php require "components/menu.php"; ?>
 
+  <?php 
+    if(!isset($_SESSION['user']) || ($_SESSION['user']['admin'] == 0 )){
+        header('Location:homelog.php');
+        exit();
+    } ?>
+
   <div class="red white-text-css-all text-center">
     <?php 
       if(isset($_SESSION['error'])){
@@ -30,9 +36,13 @@
       } 
       ?>
   </div>
+  <div class = "btn-panel">
+    <a class = "btn-panel" href="adminchoice.php">Page Admin</a>
+  </div>
 
   <h1 class="black-text-css text-center "><?php echo "Bienvenue sur le panel Admin " . $_SESSION['user']['username'] . " !"; ?> </h1>
   <div>
+
     <h2 class="black-text-css" >Liste des utilisateurs :</h2>
     <?php
     $sql = "SELECT * FROM user"; 

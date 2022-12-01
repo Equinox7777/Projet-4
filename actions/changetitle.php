@@ -1,12 +1,12 @@
 <?php 
 require_once "../cfg/config.php"; 
-$sql = "UPDATE user SET username = :username WHERE id= :id";
+$sql = "UPDATE alltext SET title = :title WHERE id= :id";
 $dataBinded=array(
-    ':username'   => $_POST['username'],
+    ':title'   => $_POST['title'],
     ':id'   => $_POST['id'],
 );
 $pre = $pdo->prepare($sql); 
 $pre->execute($dataBinded);
 
-header('Location:../adminpanel.php');
+header('Location:../indexbis.php');
 ?>
