@@ -1,3 +1,4 @@
+<?php require_once "cfg/config.php"; ?>
 <html>
  <head>
     <!--Import Google Icon Font-->
@@ -19,33 +20,51 @@
  </head>
  <body>
   
-  <?php require "components/menu.php"; ?>
+  <?php require "components/menu.php"; 
+  if (isset($_SESSION['$user'])){
+    echo "Bienvenue" . $_SESSION['username'] . "!";
+  } else { ?>
 
-  <h2 class="black-text-css form-title" >Inscription</h2>
-  <form class="form-style" method="post" action="actions/signup.php">
-      <input class="form-text" type='email' name='email' placeholder='email'/>
-      <input class="form-text" type='text' name='username' placeholder='username'/>
-      <input class="form-text" type='password' name='password' placeholder='password'/>
-      <input class="submit-button black-text-css" type='submit' value='Créer un compte' />
-  </form>
-  <h2 class="black-text-css form-title">Connexion</h2>
-  <form class="form-style" method="post" action="actions/login.php">
-    <input class="form-text" type='text' name='username' placeholder='username'/>
-    <input class="form-text" type='password' name='password' placeholder='password'/>
-    <input class="submit-button black-text-css" type='submit' value='Se connecter' />
-  </form>
+  <div class="red white-text-css-all text-center">
+    <?php 
+      if(isset($_SESSION['error'])){
+	      echo $_SESSION['error'];
+	      unset($_SESSION['error']);
+      } 
+      ?>
+  </div>
 
-  <h1>Liste des utilisateurs</h1>
-  <?php require "actions/showuser.php"; ?>
+    <h2 class="black-text-css form-title" >Inscription</h2>
+    <form class="form-style" method="post" action="actions/signup.php">
+        <input class="form-text black-text-css" type='email' name='email' placeholder='email'/>
+        <input class="form-text black-text-css" type='text' name='username' placeholder='username'/>
+        <input class="form-text black-text-css" type='password' name='password' placeholder='password'/>
+        <input class="submit-button black-text-css" type='submit' value='Créer un compte' />
+    </form>
 
-<!-- JQuery -->
-<script type="text/javascript" src="js/jquery.min.js"></script>
+    <h2 class="black-text-css form-title">Connexion</h2>
+    <form class="form-style" method="post" action="actions/login.php">
+      <input class="form-text black-text-css" type='text' name='username' placeholder='username'/>
+      <input class="form-text black-text-css" type='password' name='password' placeholder='password'/>
+      <input class="submit-button black-text-css" type='submit' value='Se connecter' />
+    </form>
+  <?php } ?>
 
-<!--Js MAterialize-->
-<script type="text/javascript" src="js/materialize.min.js"></script>
+  <?php 
+  if(isset($_SESSION['error'])){
+	  echo $_SESSION['error'];
+	  unset($_SESSION['error']);
+  } 
+  ?>
 
-<!-- Script -->
-<script type="text/javascript" src="js/script.js"></script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+
+  <!--Js MAterialize-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  <!-- Script -->
+  <script type="text/javascript" src="js/script.js"></script>
 
  </body>
 </html>

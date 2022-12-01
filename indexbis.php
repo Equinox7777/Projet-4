@@ -41,11 +41,7 @@
                 </div>
                 <div class="col s10">
                   <span class="black-text-css">
-                    Nom: Romain MICHEL<br>
-                    Étude: GTECH 1 en classe C<br>
-                    Age: 17 ans<br>
-                    Hobbie: la salle de sport, les jeux vidéos<br>
-                    Projet: A réaliser le projet 1
+                    <?php echo $index_page['intro_eleve1'] ?>
                 </span>
                 </div>
             </div>
@@ -64,11 +60,7 @@
                     </div>
                     <div class="col s10">
                         <span class="black-text-css">
-                              Nom: Lilian VIENNET<br>
-                              Étude: GTECH 1 en classe C<br>
-                              Age: 19 ans<br>
-                              Hobbie: La moto, le métal,  et les jeux vidéo<br>
-                              Projet: A réaliser le projet 2
+                            <?php echo $index_page['intro_eleve2'] ?>
                         </span>
                       </div>
                   </div>
@@ -77,53 +69,59 @@
       </div>
 </div>
 
-<div class="row">
-  <div class="col s12">
-    <h2 class="black-text-css titre-projet">
-      Plongez vous dans les 3 projets presentés en dessous !
-    </h2>
-  </div>
-</div>
 
 
-<div class="carousel">
-  <div class="carousel carousel-slider center">
-    <div class="carousel-item white-text-css red">
-      <h2 class="title-carousel " >Projet 1</h2>
-      <p class="white-text-css">Site Overwatch</p>
-      <a id="btn-carousel" class="btn-large btn-carousel black-text-css pulse" href="projet1.html" target="_blank">Découvrir <i class="material-icons right">launch</i></a>
-    </div>
-    <div class="carousel-item white-text-css green">
-      <h2 class="title-carousel ">Projet 2</h2>
-      <p class="white-text-css" >Site Assassin's Creed</p>
-      <a id="btn-carousel" class="btn-large btn-carousel black-text-css pulse" href="projet2.html" target="_blank">Découvrir <i class="material-icons right">launch</i></a>
-    </div>
-    <div class="carousel-item white-text-css blue">
-      <h2 class="title-carousel ">Projet 3</h2>
-      <p class="white-text-css" >projet 3</p>
-      <a id="btn-carousel" class="btn-large btn-carousel black-text-css pulse" href="projet3.html" target="_blank">Découvrir <i class="material-icons right">launch</i></a>    
+<!--  -->
+
+
+<h2 class="black-text-css" >Les Projets :</h2>
+    <?php
+    $sql = "SELECT * FROM project"; 
+    $pre = $pdo->prepare($sql); 
+    $pre->execute();
+    $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+   
+    foreach($data as $project){ ?>
+    <div class="project-display">
+      <h2 class="black-text-css"><?php echo $project['title']?></h2>
+      
+
+        <div class="btn-user-display">
+
+          <form method="post" action="actions/changeusername.php">
+              <input class = "textarea-admin" type='textarea' name="username" value = "<?php echo $user['username'] ?>" />
+              <input type='hidden' name="id" value = "<?php echo $user['id'] ?>" />
+              <button class="btn-adminpanel black-text-css" type="submit">Modifier</button>
+          </form>
+
+          <form method="post" action="actions/admin.php">
+              <input type='hidden' name="id" value = "<?php echo $user['id'] ?>" />
+              <input type='hidden' name="admin" value = "<?php echo $user['admin']==1?0:1 ?>" />
+              <button class="btn-adminpanel black-text-css" type="submit">Admin</button>
+          </form>
+
+          <form method="post" action="actions/deleteuser.php">
+              <input type='hidden' name="id" value = "<?php echo $user['id'] ?>" />
+              <button class="btn-adminpanel black-text-css" type="submit"><span class="material-icons admin-icon">delete</span></button>
+          </form>
+
+        </div>
+      <?php } ?>
     </div>
   </div>
-</div>
+
+
+<!--  -->
+
 
 <div id="modal1" class="modal">
           <div class="card contact-card">
             <div class="card-content">
-              <div class="container">
-                <h3>Formulaire de contact</h3>
-                <form action="index.php">
-                  <label for="fname">Nom & prénom</label>
-                  <input type="text" id="fname" name="firstname" placeholder="Votre nom et prénom">
-                  <label for="sujet">Sujet</label>
-                  <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message">
-                  <label for="emailAddress">Email</label>
-                  <input id="emailAddress" type="email" name="email" placeholder="Votre email">
-                  <label for="subject">Message</label>
-                  <textarea id="subject" name="subject" placeholder="Votre message" style="height:200px"></textarea>
-                  <input type="submit" value="Envoyer">
-                </form>
-              </div>
-
+              <span class="bold card-title black-text-css">Contactez nous !</span>
+              <p class="black-text-css contact-text"><i class="material-icons mail-icon">mail</i>
+                Emails :
+                <p class="black-text-css email-text"><?php echo $index_page['contact_email'] ?></p>
+              </p>
               <div class="modal-footer">
                 <a href="#!" class="modal-close btn-flat black-text-css"><i class="material-icons">close</i></a>
               </div>
